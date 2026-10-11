@@ -527,7 +527,8 @@ function Skills() {
                             label={skill}
                             variant="outlined"
                             sx={{
-                              height: 37,
+                              height: "auto",
+                              minHeight: 37,
                               maxWidth: "100%",
                               borderRadius: 999,
                               borderColor: "#E8E5DE",
@@ -540,10 +541,17 @@ function Skills() {
                               "& .MuiChip-icon": {
                                 ml: 1.35,
                                 mr: -0.35,
+                                flexShrink: 0,
                               },
+
                               "& .MuiChip-label": {
                                 px: 1.4,
+                                whiteSpace: "normal",
+                                overflow: "visible",
+                                textOverflow: "clip",
+                                minWidth: 0,
                               },
+
                               "&:hover": {
                                 transform: "translateY(-3px)",
                                 borderColor: technology?.color ?? "#FFB86B",
