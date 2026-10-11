@@ -156,7 +156,7 @@ function Footer() {
               fontSize: "0.79rem",
             }}
           >
-            React · TypeScript · Thoughtful design
+            Crafted with React · TypeScript · Thoughtful Design
           </Typography>
         </Stack>
       </Container>

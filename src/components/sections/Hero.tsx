@@ -291,6 +291,7 @@ function Hero() {
           position: "relative",
           zIndex: 10,
           width: "100%",
+
           pt: showHeroScene
             ? {
                 xs: 8,
@@ -298,7 +299,11 @@ function Hero() {
                 md: 11,
                 lg: 12,
               }
-            : 8,
+            : {
+                xs: 10, // 80px on mobile
+                sm: 10, // 80px on small screens
+              },
+
           pb: showHeroScene
             ? {
                 xs: 7,
@@ -306,7 +311,11 @@ function Hero() {
                 md: 7,
                 lg: 7,
               }
-            : 7,
+            : {
+                xs: 7,
+                sm: 7,
+              },
+
           display: "flex",
           alignItems: "center",
           justifyContent: showHeroScene ? "flex-start" : "center",

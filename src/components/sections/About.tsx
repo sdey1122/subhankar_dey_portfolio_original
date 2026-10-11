@@ -92,12 +92,14 @@ function About() {
       sx={{
         position: "relative",
         overflow: "hidden",
+
         py: {
-          xs: 10,
-          sm: 12,
-          md: 16,
-          lg: 18,
+          xs: 5,
+          sm: 6,
+          md: 8,
+          lg: 9,
         },
+
         backgroundColor: "background.default",
       }}
     >

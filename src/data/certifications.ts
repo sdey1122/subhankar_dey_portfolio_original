@@ -19,7 +19,7 @@ export const certificationItems: CertificationItem[] = [
     title: "Introduction to Front-End Development",
     issuer: "META",
     description:
-      "The benefits of working with UI frameworks & distinguish between front-end, back-end, and full-stack developers.",
+      "Understand the benefits of UI frameworks, explore how they support interface development, and distinguish the responsibilities of front-end, back-end, and full-stack developers in modern web projects.",
     credentialUrl:
       "https://coursera.org/share/69addb25e671a7ba3a35ed350d1a018f",
     image: "/certifications/Introduction to Front-End Development.png",
@@ -31,7 +31,7 @@ export const certificationItems: CertificationItem[] = [
     title: "Programming with JavaScript",
     issuer: "META",
     description:
-      "Creating simple JavaScript codes & manipulating objects and arrays.",
+      "Learn to write JavaScript code, create reusable functions, manipulate objects and arrays, and apply essential programming concepts to build interactive features for modern web applications effectively.",
     credentialUrl:
       "https://coursera.org/share/fb7926bbb82dfcec3e9d318d4b42eef1",
     image: "/certifications/Programming with JavaScript.png",
@@ -43,7 +43,7 @@ export const certificationItems: CertificationItem[] = [
     title: "Version Control",
     issuer: "META",
     description:
-      "Implement Version Control systems, navigate and configure using the command line & Use a GitHub repository",
+      "Learn how version control systems track code changes, configure Git through the command line, manage repositories, and use GitHub to collaborate on projects and maintain a reliable development workflow.",
     credentialUrl:
       "https://coursera.org/share/764fc104158b3ca2b12fbd60063bc311",
     image: "/certifications/Version Control.png",
@@ -55,7 +55,7 @@ export const certificationItems: CertificationItem[] = [
     title: "Foundations: Data, Data, Everywhere",
     issuer: "META",
     description:
-      "The role of spreadsheets, query languages, and data visualization tools in data analytics & Conduct an analytical thinking self assessment giving specific examples of the application of analytical thinking.",
+      "Explore the role of spreadsheets, query languages, and data visualization tools in analytics, while developing analytical thinking skills through practical examples and structured problem-solving exercises.",
     credentialUrl:
       "https://coursera.org/share/aac8b2d60de8482c217ee38e4c173187",
     image: "/certifications/data.png",
