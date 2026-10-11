@@ -24,15 +24,15 @@ function ScrollToTopButton() {
       const hero = document.getElementById("home");
       const footer = document.querySelector("footer");
 
-      // Keep the button hidden while the hero section is visible.
       const heroFinished = hero
         ? hero.getBoundingClientRect().bottom <= window.innerHeight * 0.65
         : window.scrollY > window.innerHeight * 0.65;
 
-      // Hide the button only when the footer approaches its position.
       const footerBounds = footer?.getBoundingClientRect();
       const buttonHeight = button.offsetHeight || 52;
-      const buttonBottom = window.innerHeight - 18;
+      const buttonBottom =
+        window.innerHeight -
+        (window.innerWidth < 600 ? 18 : window.innerWidth < 900 ? 22 : 30);
       const buttonTop = buttonBottom - buttonHeight;
 
       const footerOverlapsButton =
@@ -48,13 +48,15 @@ function ScrollToTopButton() {
       gsap.killTweensOf(button);
 
       if (shouldShow) {
+        // Enable clicking immediately when the button becomes visible.
+        gsap.set(button, { pointerEvents: "auto" });
+
         gsap.to(button, {
           autoAlpha: 1,
           scale: 1,
           y: 0,
           duration: 0.4,
           ease: "back.out(1.5)",
-          pointerEvents: "auto",
           overwrite: true,
         });
       } else {
@@ -89,21 +91,6 @@ function ScrollToTopButton() {
   }, []);
 
   const handleClick = () => {
-    const button = buttonRef.current;
-
-    if (button) {
-      gsap.fromTo(
-        button,
-        { scale: 0.9 },
-        {
-          scale: 1,
-          duration: 0.35,
-          ease: "elastic.out(1, 0.5)",
-          overwrite: true,
-        },
-      );
-    }
-
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -126,15 +113,20 @@ function ScrollToTopButton() {
 
           width: { xs: 44, sm: 48, md: 52 },
           height: { xs: 44, sm: 48, md: 52 },
+          minWidth: 0,
+          padding: 0,
           borderRadius: "50%",
           display: "grid",
           placeItems: "center",
+          flexShrink: 0,
 
           backgroundColor: "#FFFFFF",
           color: "#252525",
           border: "1px solid rgba(25,25,25,0.12)",
           cursor: "pointer",
           outline: "none",
+          appearance: "none",
+          WebkitTapHighlightColor: "transparent",
 
           boxShadow:
             "0 4px 8px rgba(0,0,0,0.05), 0 12px 30px rgba(0,0,0,0.09), inset 0 1px 0 #FFFFFF",
